@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+    <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="184.0" prefWidth="203.0" spacing="8.0" BorderPane.alignment="CENTER">
+               <children>
+                    <Label fx:id="label" minHeight="16" minWidth="69" text="Welcome! Sign in:">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="idTextBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleIdTextBox" prefHeight="29.0" prefWidth="147.0" />
+                  <Button fx:id="notbutton" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonClick" text="new test" />
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <ToolBar fx:id="globalToolBar" prefHeight="30.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" text="Home" />
+                  <Button fx:id="fuButton" mnemonicParsing="false" onAction="#handleFuButtonClick" text="Fuck You" />
+                  <Button mnemonicParsing="false" text="Don't Click Me" />
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="test" mnemonicParsing="false" onAction="#handleMenuItemClick" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+              </items>
+            </ToolBar>
+         </top>
+      </BorderPane>
+    </children>
+</AnchorPane>
