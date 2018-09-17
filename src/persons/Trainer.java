@@ -15,8 +15,8 @@ public class Trainer extends Member {
     
     private ArrayList<Client> trainerClients = new ArrayList<>();
     
-    public Trainer (String ID, String memType) {
-        super(ID, memType);
+    public Trainer (String ID, String firstName, String lastName, String memType) {
+        super(ID, firstName, lastName,memType);
     }
     
     @Override

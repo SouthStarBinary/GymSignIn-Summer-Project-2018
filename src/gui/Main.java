@@ -24,20 +24,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        Rectangle2D screensize = Screen.getPrimary().getVisualBounds();
-//        window = primaryStage;
-//        FXMLLoader root = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
-//        Pane myPane = (Pane) root.load();
-//        Controller controller = (Controller) root.getController();
-//        controller.window = primaryStage;
-//        Scene scene = new Scene(myPane, screensize.getWidth(), screensize.getHeight());
-//        window.setTitle("Summer Project - 2018");
-//        window.setScene(scene);
-//        //window.setMaximized(true);
-//        window.show();
-
-        MainController controller = new MainController();
-        controller.getAController(primaryStage);
+        MainController mcontroller = new MainController();
+        
+        mcontroller.getAController(primaryStage);
+        
     }
 
 }

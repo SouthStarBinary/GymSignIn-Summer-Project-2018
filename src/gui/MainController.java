@@ -18,9 +18,8 @@ import javafx.stage.Stage;
  *
  * @author jeanp
  */
-public class MainController {
+public class MainController extends ControllerParent {
     
-    Stage window;
     
     public void getAController (Stage currentStage) throws IOException {
         
@@ -32,12 +31,27 @@ public class MainController {
             Pane myPane = (Pane) root.load();
             Controller controller = (Controller) root.getController();
             controller.setStage(window);
+            controller.setTest("works");
             //controller.window = currentStage;
             Scene scene = new Scene(myPane, screensize.getWidth(), screensize.getHeight());
             window.setTitle("Summer Project - 2018");
             window.setScene(scene);
             //window.setMaximized(true);
             window.show();
+        }
+        else {
+            Rectangle2D screensize = Screen.getPrimary().getVisualBounds();
+            //window = currentStage;
+            FXMLLoader root = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+            Pane myPane = (Pane) root.load();
+            Controller controller = (Controller) root.getController();
+            controller.setStage(window);
+            //controller.window = currentStage;
+            Scene scene = new Scene(myPane, screensize.getWidth(), screensize.getHeight());
+            //window.setTitle("Summer Project - 2018");
+            window.setScene(scene);
+            //window.setMaximized(true);
+            //window.show();
         }
     }
 }

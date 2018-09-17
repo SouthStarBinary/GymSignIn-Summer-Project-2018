@@ -17,7 +17,7 @@ public class Driver {
     public void start () {
         Scanner scnr = new Scanner(System.in);
 		
-        Client test = new Client("ms123","Monthly", "N/A");
+        Client test = new Client("ms123", "Name", "LastName","Monthly", "N/A");
 		
         ArrayList<Member> memList = new ArrayList<>();
 		
@@ -47,7 +47,7 @@ public class Driver {
     
     private void getCmd (String usrIn, ArrayList<Member> memList) {
         switch (usrIn) {
-            case "!n": memList.add(newMember());
+            case "!n": //memList.add();
                 break;
             case "!l": listMembers(memList);
                 break;
@@ -75,23 +75,23 @@ public class Driver {
         }
     }
     
-    private Member newMember () {
-        Scanner scnr = new Scanner (System.in);
-        String usrInID;
-        String usrInMemtype;
-        String usrInTrainer;
-        System.out.println("new id #:");
-        usrInID = scnr.nextLine();
-        System.out.println("new Membership Type: ");
-        usrInMemtype = scnr.nextLine();
-        if (usrInMemtype.contentEquals("Trainer") || usrInMemtype.contentEquals("trainer")) {
-            Trainer newMember = new Trainer(usrInID, usrInMemtype);
-            return newMember;
-        } 
-        System.out.println("Member's Trainer:");
-        usrInTrainer = scnr.nextLine();
-        Client newMember = new Client(usrInID, usrInMemtype, usrInTrainer);
-        System.out.println("Member Saved");
-        return newMember;
-    }
+//    private Member newMember () {
+//        Scanner scnr = new Scanner (System.in);
+//        String usrInID;
+//        String usrInMemtype;
+//        String usrInTrainer;
+//        System.out.println("new id #:");
+//        usrInID = scnr.nextLine();
+//        System.out.println("new Membership Type: ");
+//        usrInMemtype = scnr.nextLine();
+//        if (usrInMemtype.contentEquals("Trainer") || usrInMemtype.contentEquals("trainer")) {
+//            Trainer newMember = new Trainer(usrInID, usrInMemtype);
+//            return newMember;
+//        } 
+//        System.out.println("Member's Trainer:");
+//        usrInTrainer = scnr.nextLine();
+//        Client newMember = new Client(usrInID, usrInMemtype, usrInTrainer);
+//        System.out.println("Member Saved");
+//        return newMember;
+//    }
 }

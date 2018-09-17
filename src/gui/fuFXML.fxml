@@ -7,12 +7,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FuController">
    <children>
-      <Label contentDisplay="CENTER" layoutX="224.0" layoutY="99.0" prefHeight="202.0" prefWidth="153.0" text="You've&#10;been &#10;fucked" wrapText="true">
+      <Label contentDisplay="CENTER" layoutX="224.0" layoutY="99.0" prefHeight="202.0" prefWidth="153.0" text="You're&#10; here&#10;test" wrapText="true">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
+      <Button layoutX="96.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleHomeButton" text="Home" />
    </children>
 </AnchorPane>

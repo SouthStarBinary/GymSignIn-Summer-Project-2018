@@ -14,9 +14,13 @@ public class Client extends Member {
     //Trainer trainer;
     String trainer;
     
-    public Client(String ID, String memType, String Trainer) {
-        super(ID, memType);
+    public Client(String ID, String firstName, String lastName, String memType, String Trainer) {
+        super(ID, firstName, lastName, memType);
         this.trainer = Trainer;
+    }
+    
+    public String getTrainer () {
+        return this.trainer;
     }
     
     @Override

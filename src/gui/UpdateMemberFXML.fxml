@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UpdateMemberController">
+    <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <ToolBar fx:id="globalToolBar" prefHeight="30.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" text="Home" />
+                  <Button fx:id="fuButton" mnemonicParsing="false" onAction="#handleFuButtonClick" text="Page" />
+                  <Button mnemonicParsing="false" text="Members" />
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="test" mnemonicParsing="false" onAction="#handleMenuItemClick" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+               <items>
+                  <FlowPane orientation="VERTICAL" vgap="5.0">
+                     <children>
+                        <Label alignment="CENTER" text="First Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstNameText" editable="false" />
+                        <Label alignment="CENTER" text="Last Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="lastNameText" editable="false" />
+                        <Label alignment="CENTER" layoutX="18.0" layoutY="75.0" text="ID#">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="IDText" editable="false" layoutX="18.0" layoutY="45.0" />
+                        <Label alignment="CENTER" layoutX="18.0" layoutY="20.0" text="MembershipType">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="membershipType" disable="true" prefWidth="150.0" />
+                        <Button fx:id="submit" mnemonicParsing="false" onAction="#onSubmitButtonClick" text="Submit" />
+                     </children>
+                     <padding>
+                        <Insets left="8.0" top="10.0" />
+                     </padding>
+                  </FlowPane>
+                  <FlowPane orientation="VERTICAL" vgap="5.0">
+                     <children>
+                        <Label alignment="CENTER" text="Trainer">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="8.0" top="8.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox fx:id="trainer" disable="true" prefWidth="150.0" />
+                        <Label text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </FlowPane>
+               </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+    </children>
+</AnchorPane>
